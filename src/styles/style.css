@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ff6f61;
+  margin-top: 30px;
+}
+
+input[type="text"] {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  text-align: center;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.card-list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  /* gap: 20px; Ajoute un espace entre les cartes */
+}
+
+.card-item {
+  width: calc(33.333% - 20px);
+  height: 650px;
+  margin-bottom: 20px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.card-item:hover {
+  transform: translateY(-10px); /* Effet de survol : élève la carte */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Titre du plat (h3) */
+.card-item h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin: 10px; /* Espacement entre le titre et la description */
+  text-transform: capitalize; /* Met le titre avec la première lettre de chaque mot en majuscule */
+}
+
+/* Information sur l'origine du plat (small) */
+.card-item small {
+  font-size: 0.875rem;
+  color: #777; /* Couleur gris clair pour le texte secondaire */
+  display: block; /* Force l'affichage du small sur une nouvelle ligne */
+  margin-bottom: 10px; /* Espacement entre le petit texte et l'image */
+}
+
+.card-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.card-description {
+  padding: 15px;
+  height: 200px; /* Hauteur fixée pour un alignement uniforme */
+  overflow: hidden;
+}
+
+.card-description .text {
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* Limite à 5 lignes */
+  -webkit-box-orient: vertical;
+  overflow: hidden; /*toujour mettre overflow hidden avec line-clamp*/
+  text-overflow: ellipsis;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.read-more {
+  display: block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.read-more:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .card-item {
+    width: calc(
+      50% - 20px
+    ); /* Cartes qui prennent la moitié de la largeur sur mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-item {
+    width: 100%; /* Cartes qui prennent la largeur complète sur très petits écrans */
+  }
+}
+
+/*******Les card************************/
+/* Note : Pour bien aligner les cards, il faut mettre le parent en display flex, ensuite sur l'enfant mettre la propriété flex : 1 0 20% */
