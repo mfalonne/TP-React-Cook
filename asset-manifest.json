@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/TP-React-Cook/static/css/main.2c56d7cc.css",
-    "main.js": "/TP-React-Cook/static/js/main.f25b7dcb.js",
+    "main.js": "/TP-React-Cook/static/js/main.910828a5.js",
     "index.html": "/TP-React-Cook/index.html",
     "main.2c56d7cc.css.map": "/TP-React-Cook/static/css/main.2c56d7cc.css.map",
-    "main.f25b7dcb.js.map": "/TP-React-Cook/static/js/main.f25b7dcb.js.map"
+    "main.910828a5.js.map": "/TP-React-Cook/static/js/main.910828a5.js.map"
   },
   "entrypoints": [
     "static/css/main.2c56d7cc.css",
-    "static/js/main.f25b7dcb.js"
+    "static/js/main.910828a5.js"
   ]
 }
